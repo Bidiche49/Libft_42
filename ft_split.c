@@ -14,8 +14,8 @@
 
 static int	ft_countword(char const *s, char c)
 {
-	int	i;
-	int	count_word;
+	int	        i;
+	const int	count_word;
 
 	i = 0;
 	count_word = 0;

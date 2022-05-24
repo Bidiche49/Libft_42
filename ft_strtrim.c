@@ -6,7 +6,7 @@
 /*   By: ntardy <ntardy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 11:39:50 by ntardy            #+#    #+#             */
-/*   Updated: 2022/05/21 15:11:27 by ntardy           ###   ########.fr       */
+/*   Updated: 2022/05/24 18:33:20 by ntardy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int			end;
 	const int	len_res = (int)ft_strlen(s1);
 
+	if (!s1 || !set)
+		return (NULL);
 	start = 0;
 	end = 0;
 	while (s1[start] && ft_strchr(set, s1[start]))

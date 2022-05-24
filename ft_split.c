@@ -14,8 +14,8 @@
 
 static int	ft_countword(char const *s, char c)
 {
-	int	        i;
-	const int	count_word;
+	int	i;
+	int	count_word;
 
 	i = 0;
 	count_word = 0;
@@ -50,7 +50,6 @@ static char	**ft_freemobile(char **res, int k)
 
 char	**ft_split(char const *s, char c)
 {
-
 	char	**res;
 	int		i;
 	int		k;

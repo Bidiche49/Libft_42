@@ -6,7 +6,7 @@
 /*   By: ntardy <ntardy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 19:08:17 by ntardy            #+#    #+#             */
-/*   Updated: 2022/03/14 19:08:17 by ntardy           ###   ########.fr       */
+/*   Updated: 2022/05/24 18:41:33 by ntardy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_atoi(const char *nptr)
 {
-	int	neg;
-	int	nb;
-	int	i;
+	int			neg;
+	long int	nb;
+	int			i;
 
 	i = 0;
 	neg = 1;
@@ -31,6 +31,10 @@ int	ft_atoi(const char *nptr)
 	}
 	while (nptr[i] >= '0' && nptr[i] <= '9')
 	{
+		if (nb * neg > 2147483647)
+			return (-1);
+		else if (nb * neg < -2147483648)
+			return (0);
 		nb = nb * 10 + (nptr[i] - 48);
 		i++;
 	}

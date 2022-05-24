@@ -6,7 +6,7 @@
 /*   By: ntardy <ntardy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 20:54:50 by ntardy            #+#    #+#             */
-/*   Updated: 2022/05/18 19:54:31 by ntardy           ###   ########.fr       */
+/*   Updated: 2022/05/24 18:28:51 by ntardy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	size_t			len_src;
 
 	i = -1;
-	if (!dest || !src)
+	if (!dest && !src)
 		return (0);
 	len_src = ft_strlen(src);
 	len_dest = ft_strlen(dest);

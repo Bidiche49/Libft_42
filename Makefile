@@ -31,8 +31,7 @@ SRCS			=	ft_isalnum.c	\
 					ft_calloc.c		\
 					ft_memmove.c	\
 					ft_memset.c		\
-					ft_memchr.c		\
-					ft_lstmap.c
+					ft_memchr.c	
 
 OBJS			= $(SRCS:.c=.o)
 
@@ -43,7 +42,9 @@ BONUS			=	ft_lstadd_back.c	\
 					ft_lstlast.c		\
 					ft_lstnew.c			\
 					ft_lstsize.c		\
-					ft_lstiter.c
+					ft_lstiter.c		\
+					ft_lstmap.c
+
 BONUS_OBJS		= $(BONUS:.c=.o)
 
 CC				= gcc
@@ -56,7 +57,6 @@ all:			$(NAME)
 
 $(NAME):		$(OBJS)
 				ar rc $(NAME) $(OBJS)
-
 clean:
 				$(RM) $(OBJS) $(BONUS_OBJS)
 
